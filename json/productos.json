@@ -54,5 +54,19 @@
         "cantidad": 9,
         "unidad": "gr",
         "fecha_vencimiento": "2023-02-25"
+    },
+    {
+        "id": 9,
+        "nombre": "Chocolate blanco",
+        "cantidad": 10,
+        "unidad": "gr",
+        "fecha_vencimiento": "2023-03-04"
+    },
+    {
+        "id": 10,
+        "nombre": "Naranjas",
+        "cantidad": 9,
+        "unidad": "kg",
+        "fecha_vencimiento": "2023-03-20"
     }
 ]
