@@ -25,20 +25,23 @@
     <div>
     <h1>Resultado del formulario</h1>
     <form action="../php/productos.php" method="post">
-      <input type="submit" value="Actualizar Datos">
+      <input type="submit" value="Cargar Datos" onclick="window.location.reload()">
+      <br>
+    
+      <table id="productos-table">
+        <thead>
+          <tr>
+            <th>Nombre del producto</th>
+            <th>Cantidad</th>
+            <th>Unidad</th>
+            <th>Fecha de vencimiento</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </form>
-    <table id="productos-table">
-      <thead>
-        <tr>
-          <th>Nombre del producto</th>
-          <th>Cantidad</th>
-          <th>Unidad</th>
-          <th>Fecha de vencimiento</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
+    
     </div>
     <div id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
@@ -49,6 +52,9 @@
       fetch('../json/productos.json')
         .then(response => response.json())
         .then(data => {
+      //inserta salto de línea en el json
+        const jsonStr = JSON.stringify(data, null, 4);
+
           // crear tabla y agregar datos
           const tableBody = document.querySelector('#productos-table tbody');
           data.forEach(producto => {
@@ -68,6 +74,21 @@
             tableBody.appendChild(row);
           });
         });
+      
+        function buscar() {
+  // obtener valor de búsqueda y criterio
+  var valorBusqueda = $('#buscar').val().toLowerCase();
+  var criterio = $('#criterio').val();
+
+  // filtrar filas de la tabla según el criterio de búsqueda
+  $('#productos-table tbody tr').filter(function() {
+    // obtener valor de la celda correspondiente al criterio de búsqueda
+    var valorCelda = $(this).find('td:eq(' + $('#criterio option:selected').index() + ')').text().toLowerCase();
+    // mostrar o ocultar fila según si coincide con el valor de búsqueda
+    $(this).toggle(valorCelda.indexOf(valorBusqueda) > -1);
+  });
+}
+
     </script>
   </body>
 </html>
