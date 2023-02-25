@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/estilo1.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
+    <link rel="stylesheet" href="../css/ventanaEmergente.css">
+    
   </head>
   <body>
     <div class="navbar">
@@ -24,7 +26,7 @@
     </div>
     <div id="titulo">
         <h2>Agregar Productos</h2>
-    <form action="procesar_formulario.php" method="post">
+    <form action="../php/envio.php" method="post">
       <label for="nombre">Nombre del producto:</label>
       <input type="text" id="nombre" name="nombre" required>
       <br>
@@ -45,10 +47,14 @@
       <input type="submit" value="Agregar producto">
     </form>
     </div>
+    <div id="ventana-emergente">
+      <p id="mensaje-exito">El producto se ha agregado correctamente.</p>
+    </div>    
     <div id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </div>
     <script src="../js/fechaHora.js"></script>
+    
   </body>
 </html>
 

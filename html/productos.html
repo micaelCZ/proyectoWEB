@@ -24,14 +24,50 @@
     </div>
     <div>
     <h1>Resultado del formulario</h1>
-    <p>Nombre del producto: <?php echo $nombre; ?></p>
-    <p>Cantidad: <?php echo $cantidad . ' ' . $unidad; ?></p>
-    <p>Fecha de vencimiento: <?php echo $fecha_vencimiento; ?></p>
+    <form action="../php/productos.php" method="post">
+      <input type="submit" value="Actualizar Datos">
+    </form>
+    <table id="productos-table">
+      <thead>
+        <tr>
+          <th>Nombre del producto</th>
+          <th>Cantidad</th>
+          <th>Unidad</th>
+          <th>Fecha de vencimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
     </div>
     <div id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </div>
     <script src="../js/fechaHora.js"></script>
-  </body>
+    <script>
+      //obtener datos del archivo json
+      fetch('../json/productos.json')
+        .then(response => response.json())
+        .then(data => {
+          // crear tabla y agregar datos
+          const tableBody = document.querySelector('#productos-table tbody');
+          data.forEach(producto => {
+            const row = document.createElement('tr');
+            const nombreCell = document.createElement('td');
+            nombreCell.textContent = producto.nombre;
+            row.appendChild(nombreCell);
+            const cantidadCell = document.createElement('td');
+            cantidadCell.textContent = producto.cantidad;
+            row.appendChild(cantidadCell);
+            const unidadCell = document.createElement('td');
+            unidadCell.textContent = producto.unidad;
+            row.appendChild(unidadCell);
+            const fechaCell = document.createElement('td');
+            fechaCell.textContent = producto.fecha_vencimiento;
+            row.appendChild(fechaCell);
+            tableBody.appendChild(row);
+          });
+        });
+    </script>
+  </body>
 </html>
-
