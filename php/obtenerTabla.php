@@ -3,6 +3,8 @@
   <head>
     <title>Modificar Productos</title>
     <meta charset="utf-8">
+    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;"">
+      <br>
     <link rel="stylesheet" href="../css/estilo1.css">
      <link rel="stylesheet" href="../css/estilo2.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
