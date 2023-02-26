@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="../html/inicio.html">Inicio</a>
+      <a href="inicio.html">Inicio</a>
       <div class="dropdown">
-        <button class="dropbtn">Inventario 
+        <button class="dropbtn">Productos
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -20,6 +20,27 @@
           <a href="obtenerTabla.php">Modificar inventario</a>
         </div>
       </div>
+      <div class="dropdown">
+        <button class="dropbtn">Categorias
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="mPrima.html">Agregar Categoria</a>
+          <a href="productos.html">Ver Categorias</a>
+          <a href="../php/obtenerTabla.php">Modificar Categorias</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Proveedores
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="mPrima.html">Agregar Proveedor</a>
+          <a href="productos.html">Ver Proveedores</a>
+          <a href="../php/obtenerTabla.php">Modificar Proveedores</a>
+        </div>
+      </div>
+
       <a href="../html/reportes.html">Reportes</a>
       <a href="../html/contabilidad.html">Contabilidad</a>
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
