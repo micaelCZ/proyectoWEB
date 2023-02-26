@@ -3,6 +3,8 @@
   <head>
     <title>Modificar Productos</title>
     <meta charset="utf-8">
+    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;">
+      <br>
     <link rel="stylesheet" href="../css/estilo1.css">
      <link rel="stylesheet" href="../css/estilo2.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
@@ -27,7 +29,7 @@
         <div class="dropdown-content">
           <a href="../html/proveedores.html">Agregar Proveedor</a>
           <a href="../html/verproveedores.html">Ver Proveedores</a>
-          <a href="obtenerTabla.php">Modificar Proveedores</a>
+          <a href="../php/modificar_p.php">Modificar Proveedores</a>
         </div>
       </div>
       <a href="../html/recetas.html">Recetas</a>

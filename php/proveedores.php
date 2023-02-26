@@ -5,7 +5,7 @@ try {
   
     // Obtener todos los productos de la tabla
     $stmt = $db->query('SELECT * FROM proveedores');
-    $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $proveedores = $stmt->fetchAll(PDO::FETCH_ASSOC);
   
     // Convertir los datos a formato JSON con la opción JSON_PRETTY_PRINT
     $json = json_encode($proveedores, JSON_PRETTY_PRINT);

@@ -9,6 +9,8 @@
   </head>
   <body>
     <div class="navbar">
+    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;"">
+      <br>
       <a href="../html/inicio.html">Inicio</a>
       <div class="dropdown">
         <button class="dropbtn">Productos
