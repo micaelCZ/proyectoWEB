@@ -132,4 +132,40 @@ input[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
+label[for="busqueda"] {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+  border-color: #333;
+  border: 1px;
+}
+
+input[type="text"]#busqueda {
+  border: 1px solid black; /* Agregar borde negro */
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.panel-inicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.panel-box {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  text-align: center;
+  background-color: #f5f5f5;
+}
 

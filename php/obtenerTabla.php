@@ -1,25 +1,65 @@
-<?php
-//Conexión a la base de datos
-$db = new PDO('sqlite:../db/materiaPrima.db');
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modificar inventario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/estilo1.css">
+     <link rel="stylesheet" href="../css/estilo2.css">
+    <link rel="icon" type="image/png" href="../img/logo.png"/>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="../html/inicio.html">Inicio</a>
+      <div class="dropdown">
+        <button class="dropbtn">Inventario 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../html/mPrima.html">Agregar inventario</a>
+          <a href="../html/productos.html">Ver inventario</a>
+          <a href="obtenerTabla.php">Modificar inventario</a>
+        </div>
+      </div>
+      <a href="../html/reportes.html">Reportes</a>
+      <a href="../html/contabilidad.html">Contabilidad</a>
+      <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
+    </div>
+<br>
 
-//Consulta para obtener los productos
-$query = "SELECT * FROM productos";
-$result = $db->query($query);
+  <h2>Lista de productos</h2>
+  <br>
 
-//Imprimir los resultados en una tabla
-while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-  echo "<tr>";
-  echo "<td>".$row['id']."</td>";
-  echo "<td>".$row['nombre']."</td>";
-  echo "<td>".$row['cantidad']."</td>";
-  echo "<td>".$row['unidad']."</td>";
-  echo "<td>".$row['fecha_vencimiento']."</td>";
+  <?php
+  //Conexión a la base de datos
+  $db = new PDO('sqlite:../db/materiaPrima.db');
+
+  //Consulta para obtener los productos
+  $query = "SELECT * FROM productos";
+  $result = $db->query($query);
+
+  //Imprimir los resultados en una tabla
+  echo "<table class='tabla'>";
+  echo "<tr><th>ID</th><th>Nombre</th><th>Cantidad</th><th>Unidad</th><th>Fecha de vencimiento</th><th>Editar</th><th>Eliminar</th></tr>";
+  while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    echo "<tr>";
+    echo "<td>".$row['id']."</td>";
+    echo "<td>".$row['nombre']."</td>";
+    echo "<td>".$row['cantidad']."</td>";
+    echo "<td>".$row['unidad']."</td>";
+    echo "<td>".$row['fecha_vencimiento']."</td>";
     echo "<td><a href='editar.php?id=".$row['id']."'>Editar</a></td>";
     echo "<td><a href='eliminar.php?id=".$row['id']."'>Eliminar</a></td>";
-  echo "</tr>";
-}
+    echo "</tr>";
+  }
+  echo "</table>";
 
-//Cerrar la conexión a la base de datos
-$db = null;
-
-?>
+  //Cerrar la conexión a la base de datos
+  $db = null;
+  ?>
+  
+  
+    <footer id="pie">
+        <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

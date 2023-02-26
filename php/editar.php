@@ -15,7 +15,7 @@ if(isset($_POST['submit'])) {
   $db->exec($query);
 
   //Redirigir al usuario a la página principal
-  header("Location: ../html/modificar.html");
+  header("Location: ../php/obtenerTabla.php");
 }
 
 if(isset($_GET['id'])) {
@@ -33,6 +33,7 @@ if(isset($_GET['id'])) {
 <html>
   <head>
     <title>Editar producto</title>
+    <link rel="stylesheet" href="../css/estilo1.css">
     <meta charset="utf-8">
   </head>
   <body>
