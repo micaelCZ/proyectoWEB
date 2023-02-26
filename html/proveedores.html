@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reportes</title>
+    <title>Agregar proveedores</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/estilo1.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
@@ -26,7 +26,7 @@
           <div class="dropdown-content">
             <a href="../html/proveedores.html">Agregar Proveedor</a>
             <a href="../html/verproveedores.html">Ver Proveedores</a>
-            <a href="../php/obtenerTabla.php">Modificar Proveedores</a>
+            <a href="../php/modificar_p.php">Modificar Proveedores</a>
           </div>
         </div>
         <a href="../html/recetas.html">Recetas</a>
@@ -34,6 +34,25 @@
         <a href="../html/informes.html">Informes</a>
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
     </div>
+     <div id="titulo">
+        <h2>Agregar Proveedores</h2>
+    <form action="../php/guardarProveedores.php" method="post">
+      <label for="nombre">Nombre del proveedor:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <br>
+      <label for="direccion">Direccion:</label>
+      <input type="text" id="direccion" name="direccion" required>
+      <br>
+       <label for="telefono">Telefono:</label>
+      <input type="number" id="telefono" name="telefono" required>
+       <br>
+      <label for="correo">Correo Electronico:</label>
+      <input type="mail" id="correo" name="correo" required>
+      <br>
+      <input type="submit" value="Agregar Proveedor">
+    </form>
+    </div>
+    
     <script src="../js/fechaHora.js"></script>
     <footer id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
