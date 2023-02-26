@@ -10,6 +10,6 @@ if(isset($_GET['id'])) {
   $db->exec($query);
 
   //Redirigir al usuario a la página principal
-  header("Location: ../html/modificar.html");
+  header("Location: ../php/obtenerTabla.php");
 }
 ?>
