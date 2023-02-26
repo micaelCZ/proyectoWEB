@@ -18,7 +18,7 @@ try {
   $db = null;
 
   // Redireccionar al usuario a una página de éxito
-  header('Location: oProduccion.php');
+  header('Location: ../html/recetas.html');
 } catch (PDOException $e) {
   // Mostrar un mensaje de error si hay un problema con la conexión a la base de datos
   echo "Error al conectar a la base de datos: " . $e->getMessage();
