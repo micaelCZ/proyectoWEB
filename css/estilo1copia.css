@@ -1,4 +1,30 @@
-body {
+header {
+	background-color: #ccc;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.logo {
+	float: left;
+}
+
+
+main {
+	margin-top: 50px;
+	padding: 20px;
+}
+
+footer {
+	background-color: #ccc;
+	height: 50px;
+	clear: both;
+}
+
+
+  body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
