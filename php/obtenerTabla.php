@@ -15,9 +15,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="../html/mPrima.html">Agregar inventario</a>
-          <a href="../html/productos.html">Ver inventario</a>
-          <a href="obtenerTabla.php">Modificar inventario</a>
+          <a href="../html/mPrima.html">Agregar Producto</a>
+          <a href="../html/productos.html">Ver Productos</a>
+          <a href="obtenerTabla.php">Modificar Productos</a>
         </div>
       </div>
       <div class="dropdown">
