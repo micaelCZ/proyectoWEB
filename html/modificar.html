@@ -23,10 +23,31 @@
       <a href="contabilidad.html">Contabilidad</a>
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
     </div>
+    <form action="../php/obtenerTabla.php" method="post">
+      <input type="submit" value="Cargar Datos" name="cargarDatos">
+    </form>
+    <div class="container">
+      <h2>Tabla de productos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Unidad</th>
+            <th>Fecha de vencimiento</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+
     <script src="../js/fechaHora.js"></script>
     <footer id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </footer>
-  </body>
+  </body>
 </html>
-
