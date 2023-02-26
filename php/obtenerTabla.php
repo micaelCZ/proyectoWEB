@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Modificar inventario</title>
+    <title>Modificar Productos</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/estilo1.css">
      <link rel="stylesheet" href="../css/estilo2.css">
@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="inicio.html">Inicio</a>
+      <a href="../html/inicio.html">Inicio</a>
       <div class="dropdown">
         <button class="dropbtn">Productos
           <i class="fa fa-caret-down"></i>
@@ -25,9 +25,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="mPrima.html">Agregar Categoria</a>
-          <a href="productos.html">Ver Categorias</a>
-          <a href="../php/obtenerTabla.php">Modificar Categorias</a>
+          <a href="../html/categorias.html">Agregar Categoria</a>
+          <a href="../html/vercategorias.html">Ver Categorias</a>
+          <a href="obtenerTabla.php">Modificar Categorias</a>
         </div>
       </div>
       <div class="dropdown">
@@ -35,14 +35,14 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="mPrima.html">Agregar Proveedor</a>
-          <a href="productos.html">Ver Proveedores</a>
-          <a href="../php/obtenerTabla.php">Modificar Proveedores</a>
+          <a href="../html/proveedores.html">Agregar Proveedor</a>
+          <a href="../html/verproveedores.html">Ver Proveedores</a>
+          <a href="obtenerTabla.php">Modificar Proveedores</a>
         </div>
       </div>
-
-      <a href="../html/reportes.html">Reportes</a>
-      <a href="../html/contabilidad.html">Contabilidad</a>
+      <a href="../html/recetas.html">Recetas</a>
+      <a href="../html/oProduccion.html">Ordenes de Produccion</a>
+      <a href="../html/informes.html">Informes</a>
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
     </div>
 <br>

@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Materia Prima</title>
+    <title>Inicio</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/estilo1.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
-    <link rel="stylesheet" href="../css/ventanaEmergente.css">
-    
+    <style>
+      /* Estilo para el encabezado fijo */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      /* Espacio de relleno para el encabezado fijo */
+      body {
+        padding-top: 70px;
+      }
+    </style>
   </head>
   <body>
     <div class="navbar">
+      <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;">
+      <br>
       <a href="../html/inicio.html">Inicio</a>
       <div class="dropdown">
         <button class="dropbtn">Productos
@@ -46,34 +61,32 @@
       <a href="../html/informes.html">Informes</a>
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
     </div>
-    <div id="titulo">
-        <h2>Agregar Productos</h2>
-    <form action="../php/envio.php" method="post">
-      <label for="nombre">Nombre del producto:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <br>
-      <label for="cantidad">Cantidad:</label>
-      <input type="number" id="cantidad" name="cantidad" required>
-      <br>
-      <label for="unidad">Unidad de medida:</label>
-      <select id="unidad" name="unidad">
-        <option value="kg">Kilogramos (kg)</option>
-        <option value="gr">Gramos (gr)</option>
-        <option value="l">Litros (l)</option>
-        <option value="ml">Mililitros (ml)</option>
-      </select>
-      <br>
-      <label for="fecha_vencimiento">Fecha de vencimiento:</label>
-      <input type="date" id="fecha_vencimiento" name="fecha_vencimiento" required>
-      <br>
-      <input type="submit" value="Agregar producto">
-    </form>
+    <div class="panel-inicio">
+      <div class="panel-box">
+        <h2>Usuarios</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam imperdiet enim quis urna tristique lobortis.</p>
+        <a href="#">Ver más</a>
+      </div>
+      <div class="panel-box">
+        <h2>Productos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam imperdiet enim quis urna tristique lobortis.</p>
+        <a href="#">Ver más</a>
+      </div>
+      <div class="panel-box">
+        <h2>Recetas</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam imperdiet enim quis urna tristique lobortis.</p>
+        <a href="#">Ver más</a>
+      </div>
+      <div class="panel-box">
+        <h2>Inventarios</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam imperdiet enim quis urna tristique lobortis.</p>
+        <a href="#">Ver más</a>
+      </div>
     </div>
     <div id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </div>
     <script src="../js/fechaHora.js"></script>
-    
   </body>
 </html>
 
