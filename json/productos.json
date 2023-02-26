@@ -1,86 +1,37 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "nombre": "Harina de MAIZ",
-        "cantidad": "5",
+        "cantidad": 5,
         "unidad": "kg",
         "fecha_vencimiento": "2023-02-25"
     },
     {
-        "id": "2",
-        "nombre": "Chocolate",
-        "cantidad": "8",
-        "unidad": "gr",
-        "fecha_vencimiento": "2023-03-12"
-    },
-    {
-        "id": "3",
+        "id": 3,
         "nombre": "Vainilla",
-        "cantidad": "4",
+        "cantidad": 4,
         "unidad": "l",
         "fecha_vencimiento": "2023-05-26"
     },
     {
-        "id": "4",
+        "id": 4,
         "nombre": "Huevos",
-        "cantidad": "4",
+        "cantidad": 4,
         "unidad": "gr",
         "fecha_vencimiento": "2023-06-02"
     },
     {
-        "id": "5",
+        "id": 5,
         "nombre": "Azucar",
-        "cantidad": "7",
+        "cantidad": 7,
         "unidad": "gr",
         "fecha_vencimiento": "2023-02-25"
     },
     {
-        "id": "6",
-        "nombre": "Mantequilla",
-        "cantidad": "9",
-        "unidad": "ml",
-        "fecha_vencimiento": "2024-01-19"
-    },
-    {
-        "id": "7",
-        "nombre": "Fresas",
-        "cantidad": "10",
+        "id": 13,
+        "nombre": "Leche condensada",
+        "cantidad": 1000,
         "unidad": "gr",
-        "fecha_vencimiento": "2023-02-28"
-    },
-    {
-        "id": "8",
-        "nombre": "Duraznos",
-        "cantidad": "9",
-        "unidad": "gr",
-        "fecha_vencimiento": "2023-02-25"
-    },
-    {
-        "id": "9",
-        "nombre": "Chocolate blanco",
-        "cantidad": "10",
-        "unidad": "gr",
-        "fecha_vencimiento": "2023-03-04"
-    },
-    {
-        "id": "10",
-        "nombre": "Mandarina",
-        "cantidad": "14",
-        "unidad": "kg",
-        "fecha_vencimiento": "2023-03-24"
-    },
-    {
-        "id": "12",
-        "nombre": "Mermelada",
-        "cantidad": "12",
-        "unidad": "l",
-        "fecha_vencimiento": "2023-02-04"
-    },
-    {
-        "id": "13",
-        "nombre": "Leche deslactosada",
-        "cantidad": "11",
-        "unidad": "l",
-        "fecha_vencimiento": "2023-01-31"
+        "fecha_vencimiento": "2023-02-15"
     }
 ]
