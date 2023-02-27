@@ -7,10 +7,9 @@
       <br>
     <link rel="stylesheet" href="../css/estilo1.css">
      <link rel="stylesheet" href="../css/estilo2.css">
-    <link rel="icon" type="image/png" href="../img/logo.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+  <link rel="icon" type="image/png" href="../img/logo.png"/>
     <div class="navbar">
       <a href="../html/inicio.html">Inicio</a>
       <div class="dropdown">
