@@ -168,5 +168,8 @@ input[type="text"]#busqueda {
   box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   text-align: center;
   background-color: #f5f5f5;
+  opacity: 0.6;
 }
+
+
 
