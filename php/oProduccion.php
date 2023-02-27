@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Modificar Ordenes</title>
+    <title>Ordenes de Producción</title>
     <meta charset="utf-8">
     <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;">
       <br>

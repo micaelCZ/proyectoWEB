@@ -1,36 +1,36 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "nombre": "Harina de MAIZ",
-        "cantidad": "5",
+        "cantidad": 5,
         "unidad": "kg",
         "fecha_vencimiento": "2023-02-25"
     },
     {
-        "id": "3",
+        "id": 3,
         "nombre": "Vainilla",
-        "cantidad": "4",
+        "cantidad": 4,
         "unidad": "l",
         "fecha_vencimiento": "2023-05-26"
     },
     {
-        "id": "4",
+        "id": 4,
         "nombre": "Huevos",
-        "cantidad": "4",
+        "cantidad": 4,
         "unidad": "gr",
         "fecha_vencimiento": "2023-06-02"
     },
     {
-        "id": "5",
+        "id": 5,
         "nombre": "Azucar",
-        "cantidad": "7",
+        "cantidad": 7,
         "unidad": "gr",
         "fecha_vencimiento": "2023-02-25"
     },
     {
-        "id": "13",
+        "id": 13,
         "nombre": "Leche condensada",
-        "cantidad": "1000",
+        "cantidad": 1000,
         "unidad": "gr",
         "fecha_vencimiento": "2023-02-15"
     }

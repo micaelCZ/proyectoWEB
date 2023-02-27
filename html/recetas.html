@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reportes</title>
+    <title>Recetas</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/estilo1.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
@@ -52,6 +52,11 @@
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
     </div>
     <br>
+    <br>
+    
+    <center><form><h2> Puedes generar un código aleatorio aquí. También puedes ingresar un código manual en su lugar</h2><button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo1()">Generar código</button><input type="text" id="campo_codigo" name="codigo" placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;"></form></center>
+    <br>
+    <br>
     <div id="receta1">
       <form action="../php/guardarReceta.php" method="post">
         <h2>Pastel de chocolate (16 porciones)</h2>
@@ -60,8 +65,7 @@
         <input type="hidden" id="producto" name="producto" value="Pastel de Chocolate">
         <input type="number" id="cantidad" name="cantidad" required>
         <label for="cantidad">Código :</label>
-        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
-        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo1()">Generar código</button>
+        <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
 
         <ul>
           <li>Ingredientes:</li>
@@ -87,8 +91,8 @@
         <input type="hidden" id="producto" name="producto" value="Pastel de Naranja">
         <input type="number" id="cantidad" name="cantidad" required>
         <label for="cantidad">Código :</label>
-        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
-        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo2()">Generar código</button>
+        <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
+        
 
         <ul>
           <li>Ingredientes:</li>
@@ -116,8 +120,7 @@
         <input type="hidden" id="producto" name="producto" value="Pastel de Limon">
         <input type="number" id="cantidad" name="cantidad" required>
         <label for="cantidad">Código :</label>
-        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
-        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo3()">Generar código</button>
+        <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
 
         <ul>
           <li>Ingredientes:</li>
@@ -141,8 +144,7 @@
         <input type="hidden" id="producto" name="producto" value="Pastel de Naranja">
         <input type="number" id="cantidad" name="cantidad" required>
         <label for="cantidad">Código :</label>
-        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
-        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo4()">Generar código</button>
+        <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
         <ul>
           <li>Ingredientes:</li>
           <ul>
@@ -166,8 +168,7 @@
         <input type="hidden" id="producto" name="producto" value="Pastel de Crema Pastelera">
         <input type="number" id="cantidad" name="cantidad" required>
         <label for="cantidad">Código :</label>
-        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
-        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo5()">Generar código</button>
+        <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
 
         <ul>
           <li>Ingredientes:</li>
