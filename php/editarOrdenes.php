@@ -42,7 +42,7 @@ if(isset($_GET['id'])) {
       <label>Codigo:</label>
       <input type="text" name="codigo" value="<?php echo $row['codigo']; ?>"><br>
       <label>Producto:</label>
-      <input type="number" name="producto" value="<?php echo $row['producto']; ?>"><br>
+      <input type="text" name="producto" value="<?php echo $row['producto']; ?>"><br>
       <label>Cantidad:</label>
       <input type="text" name="cantidad" value="<?php echo $row['cantidad']; ?>"><br>
       <input type="submit" name="submit" value="Guardar cambios">

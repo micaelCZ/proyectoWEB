@@ -5,6 +5,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/estilo1.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
+    <style>
+      .boton-generar {
+        background-color: #4CAF50; /* Color de fondo */
+        border: none; /* Sin borde */
+        color: white; /* Color de texto */
+        padding: 10px 20px; /* Espacio alrededor del texto */
+        text-align: center; /* Alinear el texto al centro */
+        text-decoration: none; /* Sin subrayado */
+        display: inline-block; /* Mostrar como bloque en línea */
+        font-size: 16px; /* Tamaño de letra */
+        margin: 4px 2px; /* Margen superior e inferior y margen izquierdo y derecho */
+        cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+        border-radius: 8px; /* Redondear bordes */
+      }
+    </style>
   </head>
   <body>
     <div class="navbar">
@@ -38,19 +53,26 @@
     </div>
     <br>
     <div id="receta1">
-      <form action="guardarReceta.php" method="post">
+      <form action="../php/guardarReceta.php" method="post">
         <h2>Pastel de chocolate (16 porciones)</h2>
         <center><img src="../img/pastelchocolate.png" style="width: 40%;"></center>
+        <label for="cantidad">Cantidad:</label>
+        <input type="hidden" id="producto" name="producto" value="Pastel de Chocolate">
+        <input type="number" id="cantidad" name="cantidad" required>
+        <label for="cantidad">Código :</label>
+        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
+        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo1()">Generar código</button>
+
         <ul>
           <li>Ingredientes:</li>
           <ul>
-            <li>135 g de Mantequilla</li>
-            <li>400 g de Leche Condensada</li>
-            <li>3 u  huevos</li>
-            <li>450 g de Harina</li>
-            <li>10 g de Levadura</li>
-            <li>675 g de Chocolate semiamargo</li>
-            <li>570 g Media Crema</li>
+            <li><input type="number" name="nombre" value="135" style="width: 60px;" readonly>g de Mantequilla</li>
+            <li><input type="number" name="nombre" value="400" style="width: 60px;" readonly>g de Leche Condensada</li>
+            <li><input type="number" name="nombre" value="3" style="width: 60px;" readonly>u de huevos</li>
+            <li><input type="number" name="nombre" value="450" style="width: 60px;" readonly>g de Harina</li>
+            <li><input type="number" name="nombre" value="10" style="width: 60px;" readonly>g de Levadura</li>
+            <li><input type="number" name="nombre" value="675" style="width: 60px;" readonly>g de Chocolate semiamargo</li>
+            <li><input type="number" name="nombre" value="570" style="width: 60px;" readonly>g de Media Crema</li>
           </ul>
         </ul>
         <input type="submit" value="Guardar receta">
@@ -58,21 +80,28 @@
     </div>
     <br>
     <div id="receta2">
-      <form action="guardarReceta.php" method="post">
+      <form action="../php/guardarReceta.php" method="post">
         <h2>Pastel de Vainilla (16 porciones)</h2>
         <center><img src="../img/pastelVainilla.jpeg" style="width: 40%;"></center>
+        <label for="cantidad">Cantidad:</label>
+        <input type="hidden" id="producto" name="producto" value="Pastel de Naranja">
+        <input type="number" id="cantidad" name="cantidad" required>
+        <label for="cantidad">Código :</label>
+        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
+        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo2()">Generar código</button>
+
         <ul>
           <li>Ingredientes:</li>
           <ul>
-            <li>200 g de Mantequilla</li>
-            <li>200 g de Azúcar</li>
-            <li>200 g de Harina</li>
-            <li>4 u Huevos</li>
-            <li>5 g de Esencia de vainilla</li>
-            <li>0.10 l de Leche</li>
-            <li>2.5 g de Levadura</li>
-            <li>1.25 g de Sal</li>
-            <li>2.5 g de Ron</li>
+            <li><input type="number" name="mantequilla" value="200" style="width: 60px;" readonly>g de Mantequilla</li>
+            <li><input type="number" name="lecheCondensada" value="400" style="width: 60px;" readonly>g de Leche Condensada</li>
+            <li><input type="number" name="harina" value="200" style="width: 60px;" readonly>g de Harina</li>
+            <li><input type="number" name="huevos" value="4" style="width: 60px;" readonly>u Huevos</li>
+            <li><input type="number" name="vainilla" value="5" style="width: 60px;" readonly>g de Esencia de vainilla</li>
+            <li><input type="number" name="leche" value="0.10" style="width: 60px;" readonly>l de Leche</li>
+            <li><input type="number" name="levadura" value="2.5" style="width: 60px;" readonly>g de Levadura</li>
+            <li><input type="number" name="sal" value="1.25" style="width: 60px;" readonly>g de Sal</li>
+            <li><input type="number" name="ron" value="2.5" style="width: 60px;" readonly>g de Ron</li>
           </ul>
         </ul>
         <input type="submit" value="Guardar receta">
@@ -80,17 +109,24 @@
     </div>
     <br>
     <div id="receta3">
-      <form action="guardarReceta.php" method="post">
+      <form action="../php/guardarReceta.php" method="post">
         <h2>Pastel de Limon(16 porciones)</h2>
         <center><img src="../img/pastelLimon.jpeg" style="width: 40%;"></center>
+        <label for="cantidad">Cantidad:</label>
+        <input type="hidden" id="producto" name="producto" value="Pastel de Limon">
+        <input type="number" id="cantidad" name="cantidad" required>
+        <label for="cantidad">Código :</label>
+        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
+        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo3()">Generar código</button>
+
         <ul>
           <li>Ingredientes:</li>
           <ul>
-            <li>200 g de Galletas María</li>
-            <li>400 g de Leche Condensada</li>
-            <li>500 g de Leche Evaporada</li>
-            <li>2 u de Limones/li>
-            <li>570 g Media Crema</li>
+            <li><input type="number" name="galletasMaria" value="200" style="width: 60px;" readonly>g de Galletas María</li>
+            <li><input type="number" name="lecheCondensada" value="400" style="width: 60px;" readonly>g de Leche Condensada</li>
+            <li><input type="number" name="lecheEvaporada" value="500" style="width: 60px;" readonly>g de Leche Evaporada</li>
+            <li><input type="number" name="limones" value="2" style="width: 60px;" readonly>u Limones</li>
+            <li><input type="number" name="mediaCrema" value="570" style="width: 60px;" readonly>g Media Crema</li>
           </ul>
         </ul>
         <input type="submit" value="Guardar receta">
@@ -98,18 +134,24 @@
     </div>
     <br>
     <div id="receta4">
-      <form action="guardarReceta.php" method="post">
+      <form action="../php/guardarReceta.php" method="post">
         <h2>Pastel de Naranja(16 porciones)</h2>
         <center><img src="../img/pastelNaranja.png" style="width: 40%;"></center>
+        <label for="cantidad">Cantidad:</label>
+        <input type="hidden" id="producto" name="producto" value="Pastel de Naranja">
+        <input type="number" id="cantidad" name="cantidad" required>
+        <label for="cantidad">Código :</label>
+        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
+        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo4()">Generar código</button>
         <ul>
           <li>Ingredientes:</li>
           <ul>
-            <li>6 u Huevos</li>
-            <li>280 g Azucar</li>
-            <li>225 g Mantequilla</li>
-            <li>230 g Harina</li>
-            <li>3 u Naranja</li>
-	          <li>5 g de Esencia de vainilla</li>
+            <li><input type="number" name="huevos" value="6" style="width: 60px;" readonly>u Huevos</li>
+            <li><input type="number" name="azucar" value="280" style="width: 60px;" readonly>g Azucar</li>
+            <li><input type="number" name="mantequilla" value="225" style="width: 60px;" readonly>g Mantequilla</li>
+            <li><input type="number" name="harina" value="230" style="width: 60px;" readonly>g Harina</li>
+            <li><input type="number" name="naranja" value="3" style="width: 60px;" readonly>u Naranja</li>
+            <li><input type="number" name="vainilla" value="5" style="width: 60px;" readonly>g de Esencia de vainilla</li>
           </ul>
         </ul>
         <input type="submit" value="Guardar receta">
@@ -117,18 +159,25 @@
     </div>
     <br>
     <div id="receta5">
-      <form action="guardarReceta.php" method="post">
+      <form action="../php/guardarReceta.php" method="post">
         <h2>Pastel de Crema Pastelera(16 porciones)</h2>
         <center><img src="../img/pastelCremaPastelera.jpg" style="width: 40%;"></center>
+        <label for="cantidad">Cantidad:</label>
+        <input type="hidden" id="producto" name="producto" value="Pastel de Crema Pastelera">
+        <input type="number" id="cantidad" name="cantidad" required>
+        <label for="cantidad">Código :</label>
+        <input type="text" id="campo_codigo" name="codigo" readonly placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
+        <button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo5()">Generar código</button>
+
         <ul>
           <li>Ingredientes:</li>
           <ul>
-            <li>4 u huevos</li>
-            <li>170 g de Azucar</li>
-            <li>0.5 l de Leche</li>
-            <li>310 g de Harina</li>
-            <li>5 g de Esencia de vainilla</li>
-	          <li>10 g de Levadura</li>
+            <li><input type="number" name="huevos" value="5" style="width: 60px;" readonly>u huevos</li>
+            <li><input type="number" name="azucar" value="170" style="width: 60px;" readonly>g de Azucar</li>
+            <li><input type="number" name="leche" value="0.5" style="width: 60px;" readonly>l de Leche</li>
+            <li><input type="number" name="harina" value="310" style="width: 60px;" readonly>g de Harina</li>
+            <li><input type="number" name="vainilla" value="5" style="width: 60px;" readonly>g de Esencia de vainilla</li>
+            <li><input type="number" name="levadura" value="10" style="width: 60px;" readonly>g de Levadura</li> 
           </ul>
         </ul>
         <input type="submit" value="Guardar receta">
@@ -137,6 +186,7 @@
 
 
     <script src="../js/fechaHora.js"></script>
+    <script src="../js/codigos.js"></script>
     <footer id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </footer>

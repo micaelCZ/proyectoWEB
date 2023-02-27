@@ -3,11 +3,12 @@
   <head>
     <title>Modificar Ordenes</title>
     <meta charset="utf-8">
-    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;"">
+    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;">
       <br>
     <link rel="stylesheet" href="../css/estilo1.css">
      <link rel="stylesheet" href="../css/estilo2.css">
     <link rel="icon" type="image/png" href="../img/logo.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="navbar">
@@ -73,5 +74,6 @@
     <footer id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </footer>
+    <script src="../js/fechaHora.js"></script>
 </body>
 </html>
