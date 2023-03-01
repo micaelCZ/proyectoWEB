@@ -16,21 +16,21 @@
     {
         "id": 4,
         "nombre": "Huevos",
-        "cantidad": 4,
+        "cantidad": 1,
         "unidad": "gr",
         "fecha_vencimiento": "2023-06-02"
     },
     {
         "id": 5,
         "nombre": "Azucar",
-        "cantidad": 7,
+        "cantidad": 4,
         "unidad": "gr",
         "fecha_vencimiento": "2023-02-25"
     },
     {
         "id": 13,
         "nombre": "Leche condensada",
-        "cantidad": 1000,
+        "cantidad": 900,
         "unidad": "gr",
         "fecha_vencimiento": "2023-02-15"
     }
