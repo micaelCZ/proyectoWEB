@@ -7,6 +7,12 @@
     <link rel="icon" type="image/png" href="../img/logo.png"/>
   </head>
   <body>
+    
+  <!--Barra de navegación-->
+  <header>
+    <div class="navbar-container">
+    </div>
+  </header>
     <div class="navbar">
       <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;"">
       <br>
@@ -37,6 +43,13 @@
       <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
     </div>
     <script src="../js/fechaHora.js"></script>
+    <!-- Script que carga la barra de navegación-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.navbar-container').load('navbar.html');
+    });
+  </script>
     <footer id="pie">
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </footer>

@@ -44,7 +44,7 @@ body {
     font-size: 16px;
   }
   input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #0ebad1;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,7 +54,7 @@ body {
     transition: background-color 0.2s ease-in-out;
   }
   input[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #05daf7;
     
   }
 

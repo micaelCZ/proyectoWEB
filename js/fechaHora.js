@@ -20,7 +20,7 @@
        var segundo = fecha.getSeconds().toString().padStart(2, "0");
 
        // Formatear la fecha y hora según el estándar ISO 8601 (YYYY-MM-DDThh:mm:ss)**
-       var formatoISO = año + "-" + mes + "-" + dia + "T" + hora + ":" + minuto + ":" + segundo;
+       var formatoISO = año + "-" + mes + "-" + dia + "&nbsp;&nbsp;&nbsp;Hora:" + hora + ":" + minuto + ":" + segundo;
 
        // Escribir la fecha y hora en el atributo datetime del elemento time
        tiempo.setAttribute("datetime", formatoISO);

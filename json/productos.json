@@ -1,37 +1,23 @@
 [
     {
         "id": 1,
-        "nombre": "Harina de MAIZ",
-        "cantidad": 5,
-        "unidad": "kg",
-        "fecha_vencimiento": "2023-02-25"
+        "nombre": "Chocolate",
+        "cantidad": 100,
+        "unidad": "gr",
+        "fecha_vencimiento": "2023-03-24"
+    },
+    {
+        "id": 2,
+        "nombre": "Vainilla",
+        "cantidad": 100,
+        "unidad": "gr",
+        "fecha_vencimiento": "2023-03-23"
     },
     {
         "id": 3,
-        "nombre": "Vainilla",
-        "cantidad": 4,
-        "unidad": "l",
-        "fecha_vencimiento": "2023-05-26"
-    },
-    {
-        "id": 4,
-        "nombre": "Huevos",
-        "cantidad": 1,
-        "unidad": "gr",
-        "fecha_vencimiento": "2023-06-02"
-    },
-    {
-        "id": 5,
-        "nombre": "Azucar",
-        "cantidad": 4,
-        "unidad": "gr",
-        "fecha_vencimiento": "2023-02-25"
-    },
-    {
-        "id": 13,
-        "nombre": "Leche condensada",
-        "cantidad": 900,
-        "unidad": "gr",
-        "fecha_vencimiento": "2023-02-15"
+        "nombre": "Fresas",
+        "cantidad": 88,
+        "unidad": "ml",
+        "fecha_vencimiento": "2023-03-29"
     }
 ]

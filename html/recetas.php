@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="../img/logo.png" />
   <style>
     .boton-generar {
-      background-color: #4CAF50;
+      background-color: #0ec6d3;
       /* Color de fondo */
       border: none;
       /* Sin borde */
@@ -33,37 +33,12 @@
     }
   </style>
 </head>
-
+<!--Barra de navegación-->
+<header>
+    <div class="navbar-container">
+    </div>
+  </header>
 <body>
-  <div class="navbar">
-    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;"">
-      <br>
-      <a href=" ../html/inicio.html">Inicio</a>
-    <div class="dropdown">
-      <button class="dropbtn">Productos
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="../html/mPrima.html">Agregar Producto</a>
-        <a href="../html/productos.html">Ver Productos</a>
-        <a href="../php/obtenerTabla.php">Modificar Productos</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Proveedores
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="../html/proveedores.html">Agregar Proveedor</a>
-        <a href="../html/verproveedores.html">Ver Proveedores</a>
-        <a href="../php/obtenerTabla.php">Modificar Proveedores</a>
-      </div>
-    </div>
-    <a href="../html/recetas.html">Recetas</a>
-    <a href="../php/oProduccion.php">Ordenes de Produccion</a>
-    <a href="../html/informes.html">Informes</a>
-    <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
-  </div>
   <br>
   <br>
 
@@ -291,7 +266,7 @@
       <input type="hidden" id="producto" name="producto" value="Pastel de Vainilla">
       <input type="number" id="cantidad" name="cantidad" required autofocus style="width: 170px;" placeholder="Cantidad de pasteles">
       <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
-      <label for="nombre">Ingrediente 1:</label>
+      <label for="nombre" >Ingrediente 1:</label>
     <select name="nombre" id="nombre" style="width: 350px;">
       <?php
       // Conexión a la base de datos utilizando PDO
@@ -308,6 +283,7 @@
       ?>
     </select>
     <input type="number" id="cantidad" name="cantidad" style="width: 150px;" placeholder="Cantidad"><br>
+    
     <!-- Ingrediente 2 -->
     <label for="nombre" >Ingrediente 2:</label>
     <select name="nombre" id="nombre" style="width: 350px;">
@@ -422,6 +398,13 @@
 
   <script src="../js/fechaHora.js"></script>
   <script src="../js/codigos.js"></script>
+  <!-- Script que carga la barra de navegación-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.navbar-container').load('navbar.html');
+    });
+  </script>
   
   <footer id="pie">
     <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>

@@ -33,15 +33,22 @@ if(isset($_GET['id'])) {
 <html>
   <head>
     <title>Editar producto</title>
+    <link rel="icon" type="image/png" href="../img/logo.png"/>
+    
     <link rel="stylesheet" href="../css/estilo1.css">
     <meta charset="utf-8">
   </head>
   <body>
+    <!--Barra de navegación-->
+  <header>
+    <div class="navbar-container">
+    </div>
+  </header>
     <h2>Editar producto</h2>
     <form method="POST">
       <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
       <label>Nombre:</label>
-      <input type="text" name="nombre" value="<?php echo $row['nombre']; ?>"><br>
+      <input type="text" name="nombre" autofocus value="<?php echo $row['nombre']; ?>"><br>
       <label>Cantidad:</label>
       <input type="number" name="cantidad" value="<?php echo $row['cantidad']; ?>"><br>
       <label>Unidad:</label>
@@ -51,4 +58,11 @@ if(isset($_GET['id'])) {
       <input type="submit" name="submit" value="Guardar cambios">
     </form>
   </body>
+<!-- Script que carga la barra de navegación-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.navbar-container').load('../html/navbar.html');
+    });
+  </script>
 </html>

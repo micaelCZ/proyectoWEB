@@ -3,43 +3,20 @@
   <head>
     <title>Modificar Productos</title>
     <meta charset="utf-8">
-    <img src="../img/logo.png" alt="Logo" style="width: 100px; margin-left: 20px;">
-      <br>
     <link rel="stylesheet" href="../css/estilo1.css">
      <link rel="stylesheet" href="../css/estilo2.css">
-    <link rel="icon" type="image/png" href="../img/logo.png"/>
+     <link rel="icon" type="image/png" href="../img/logo.png"/>
+    
   </head>
   <body>
-    <div class="navbar">
-      <a href="../html/inicio.html">Inicio</a>
-      <div class="dropdown">
-        <button class="dropbtn">Productos
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../html/mPrima.html">Agregar Producto</a>
-          <a href="../html/productos.html">Ver Productos</a>
-          <a href="obtenerTabla.php">Modificar Productos</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Proveedores
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../html/proveedores.html">Agregar Proveedor</a>
-          <a href="../html/verproveedores.html">Ver Proveedores</a>
-          <a href="../php/modificar_p.php">Modificar Proveedores</a>
-        </div>
-      </div>
-      <a href="../html/recetas.html">Recetas</a>
-      <a href="../php/oProduccion.php">Ordenes de Produccion</a>
-      <a href="../html/informes.html">Informes</a>
-      <div id="fecha-hora">Usuario: admin - Fecha y hora: <time datetime=""></time></div>
+    <!--Barra de navegación-->
+  <header>
+    <div class="navbar-container">
     </div>
+  </header>
 <br>
 
-  <h2>Lista de productos</h2>
+  <h2>Lista de productos en inventario</h2>
   <br>
 
   <?php
@@ -75,4 +52,11 @@
         <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
     </footer>
 </body>
+<!-- Script que carga la barra de navegación-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.navbar-container').load('../html/navbar.html');
+    });
+  </script>
 </html>

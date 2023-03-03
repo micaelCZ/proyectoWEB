@@ -117,7 +117,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #1ac8ce;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -130,7 +130,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #0ec6d3;
 }
 
 label[for="busqueda"] {
