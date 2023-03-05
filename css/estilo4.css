@@ -1,0 +1,24 @@
+.boton-generar {
+    background-color: #0ec6d3;
+    /* Color de fondo */
+    border: none;
+    /* Sin borde */
+    color: white;
+    /* Color de texto */
+    padding: 10px 20px;
+    /* Espacio alrededor del texto */
+    text-align: center;
+    /* Alinear el texto al centro */
+    text-decoration: none;
+    /* Sin subrayado */
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    font-size: 16px;
+    /* Tamaño de letra */
+    margin: 4px 2px;
+    /* Margen superior e inferior y margen izquierdo y derecho */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar el ratón */
+    border-radius: 8px;
+    /* Redondear bordes */
+  }
