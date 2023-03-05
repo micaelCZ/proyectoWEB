@@ -44,6 +44,17 @@
 
   <center>
     <form>
+      <h2> Puedes crear una receta aquí.</h2>
+      <button type="button" class="boton-agregar" onclick="window.location.href='../html/addReceta.html'">Agregar receta</button>
+    </form>
+  </center>
+
+
+  <br>
+  <br>
+
+  <center>
+    <form>
       <h2> Puedes generar un código aleatorio aquí. También puedes ingresar un código manual en su lugar</h2><button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo1()">Generar código</button><input type="text" id="campo_codigo" name="codigo" placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
     </form>
   </center>
