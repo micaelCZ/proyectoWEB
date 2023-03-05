@@ -37,10 +37,11 @@ try {
   }
 
   // Preparar una sentencia SQL para insertar un nuevo registro en la tabla de productos
-  $stmt = $db->prepare('INSERT INTO ordenes (codigo, producto, cantidad) VALUES (:codigo, :producto, :cantidad)');
+  $stmt = $db->prepare('INSERT INTO receta (codigo, producto, cantidad, npastel) VALUES (:codigo, :producto, :cantidad, :npastel)');
 
   // Asignar valores a los parámetros de la sentencia SQL
   $stmt->bindParam(':codigo', $_POST['codigo']);
+  $stmt->bindParam(':npastel', $_POST['npastel']);
   $stmt->bindParam(':producto', $_POST['producto']);
   $stmt->bindParam(':cantidad', $_POST['cantidad']);
 
