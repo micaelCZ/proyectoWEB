@@ -5,13 +5,13 @@ $db = new PDO('sqlite:../db/materiaPrima.db');
 if(isset($_POST['submit'])) {
   //Obtener los datos del formulario
   $id = $_POST['id'];
-  $nombre = $_POST['codigo'];
-  $cantidad = $_POST['producto'];
-  $unidad = $_POST['cantidad'];
+  $nombre = $_POST['nombrep'];
+  $cantidad = $_POST['precio'];
+  
 
   //Actualizar los datos en la base de datos
-  $query = "UPDATE ordenes SET codigo='$codigo', producto='$producto', cantidad='$cantidad', WHERE id='$id'";
-  $db->exec($query);
+ $query = "UPDATE recetaspasteles SET nombrep='$nombrep', precio='$precio' WHERE id='$id'";
+ $db->exec($query);
 
   //Redirigir al usuario a la página principal
   header("Location: ../php/oProduccion.php");
@@ -21,7 +21,7 @@ if(isset($_GET['id'])) {
   $id = $_GET['id'];
 
   //Consulta para obtener el producto a editar
-  $query = "SELECT * FROM ordenes WHERE id='$id'";
+  $query = "SELECT * FROM recetaspasteles WHERE id='$id'";
   $result = $db->query($query);
   $row = $result->fetch(PDO::FETCH_ASSOC);
 
@@ -46,12 +46,10 @@ if(isset($_GET['id'])) {
     <h2>Editar producto</h2>
     <form method="POST">
       <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-      <label>Producto:</label>
-      <input type="text" name="producto" autofocus value="<?php echo $row['producto']; ?>"><br>
-      <label>Codigo:</label>
-      <input type="text" name="codigo" value="<?php echo $row['codigo']; ?>"><br>
-      <label>Cantidad:</label>
-      <input type="text" name="cantidad" value="<?php echo $row['cantidad']; ?>"><br>
+      <label>Nombre del pastel:</label>
+      <input type="text" name="nombre" autofocus value="<?php echo $row['nombrep']; ?>"><br>
+      <label>Precio:</label>
+      <input type="number" name="precio" value="<?php echo $row['precio']; ?>"><br>
       <input type="submit" name="submit" value="Guardar cambios">
     </form>
   </body>

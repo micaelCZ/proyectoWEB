@@ -6,7 +6,7 @@ if(isset($_GET['id'])) {
   $id = $_GET['id'];
 
   //Consulta para eliminar el producto de la base de datos
-  $query = "DELETE FROM ordenes WHERE id='$id'";
+  $query = "DELETE FROM recetaspasteles WHERE id='$id'";
   $db->exec($query);
 
   //Redirigir al usuario a la página principal
