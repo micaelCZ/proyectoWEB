@@ -14,11 +14,6 @@ $cantidad_chocolate_necesario = $_POST['cantidad'] * 300;
 // Restar la cantidad de chocolate necesario de la cantidad de chocolate disponible
 $nueva_cantidad_chocolate = $cantidad_chocolate_disponible - $cantidad_chocolate_necesario;
 
-// Actualizar la cantidad de chocolate en la base de datos
-$stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_chocolate WHERE nombre = "Chocolate"');
-$stmt->bindParam(':nueva_cantidad_chocolate', $nueva_cantidad_chocolate, PDO::PARAM_INT);
-$stmt->execute();
-
 
 
 
@@ -33,14 +28,6 @@ $cantidad_mantequilla_necesario = $_POST['cantidad'] * 90;
 
 // Restar la cantidad de mantequilla necesario de la cantidad de mantequilla disponible
 $nueva_cantidad_mantequilla = $cantidad_mantequilla_disponible - $cantidad_mantequilla_necesario;
-
-// Actualizar la cantidad de mantequilla en la base de datos
-$stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_mantequilla WHERE nombre = "Mantequilla"');
-$stmt->bindParam(':nueva_cantidad_mantequilla', $nueva_cantidad_mantequilla, PDO::PARAM_INT);
-$stmt->execute();
-
-
-
 
 
 
@@ -57,17 +44,6 @@ $cantidad_lechecondensada_necesario = $_POST['cantidad'] * 387;
 // Restar la cantidad de Leche Condensada necesario de la cantidad de Leche Condensada disponible
 $nueva_cantidad_lechecondensada = $cantidad_lechecondensada_disponible - $cantidad_lechecondensada_necesario;
 
-// Actualizar la cantidad de Leche Condensada en la base de datos
-$stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_lechecondensada WHERE nombre = "Leche Condensada"');
-$stmt->bindParam(':nueva_cantidad_lechecondensada', $nueva_cantidad_lechecondensada, PDO::PARAM_INT);
-$stmt->execute();
-
-
-
-
-
-
-
 
 
 
@@ -82,15 +58,6 @@ $cantidad_Huevos_necesario = $_POST['cantidad'] * 3;
 
 // Restar la cantidad de Huevos necesario de la cantidad de Huevos disponible
 $nueva_cantidad_Huevos = $cantidad_Huevos_disponible - $cantidad_Huevos_necesario;
-
-// Actualizar la cantidad de Huevos en la base de datos
-$stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_Huevos WHERE nombre = "Huevos"');
-$stmt->bindParam(':nueva_cantidad_Huevos', $nueva_cantidad_Huevos, PDO::PARAM_INT);
-$stmt->execute();
-
-
-
-
 
 
 
@@ -107,13 +74,6 @@ $cantidad_HarinadeTrigo_necesario = $_POST['cantidad'] * 454;
 // Restar la cantidad de Harina de Trigo necesario de la cantidad de Harina de Trigo disponible
 $nueva_cantidad_HarinadeTrigo = $cantidad_HarinadeTrigo_disponible - $cantidad_HarinadeTrigo_necesario;
 
-// Actualizar la cantidad de Harina de Trigo en la base de datos
-$stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_HarinadeTrigo WHERE nombre = "Harina de Trigo"');
-$stmt->bindParam(':nueva_cantidad_HarinadeTrigo', $nueva_cantidad_HarinadeTrigo, PDO::PARAM_INT);
-$stmt->execute();
-
-
-
 
 
 
@@ -129,15 +89,42 @@ $cantidad_Levadura_necesario = $_POST['cantidad'] * 10;
 // Restar la cantidad de Levadura necesario de la cantidad de Levaduradisponible
 $nueva_cantidad_Levadura = $cantidad_Levadura_disponible - $cantidad_Levadura_necesario;
 
-// Actualizar la cantidad de Levadura en la base de datos
-$stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_Levadura WHERE nombre = "Levadura"');
-$stmt->bindParam(':nueva_cantidad_Levadura', $nueva_cantidad_Levadura, PDO::PARAM_INT);
-$stmt->execute();
 
 
 
+// Verificar que la cantidad de chocolate, mantequilla, leche condensada, huevos, harina de trigo y levadura sea mayor o igual a 0
+if ($nueva_cantidad_chocolate >= 0 && $nueva_cantidad_mantequilla >= 0 && $nueva_cantidad_lechecondensada >= 0 && $nueva_cantidad_Huevos >= 0 && $nueva_cantidad_HarinadeTrigo >= 0 && $nueva_cantidad_Levadura) {
+    // Actualizar la cantidad de chocolate en la base de datos
+    $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_chocolate WHERE nombre = "Chocolate"');
+    $stmt->bindParam(':nueva_cantidad_chocolate', $nueva_cantidad_chocolate, PDO::PARAM_INT);
+    $stmt->execute();
+
+    // Actualizar la cantidad de mantequilla en la base de datos
+    $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_mantequilla WHERE nombre = "Mantequilla"');
+    $stmt->bindParam(':nueva_cantidad_mantequilla', $nueva_cantidad_mantequilla, PDO::PARAM_INT);
+    $stmt->execute();
+
+    // Actualizar la cantidad de Leche Condensada en la base de datos
+    $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_lechecondensada WHERE nombre = "Leche Condensada"');
+    $stmt->bindParam(':nueva_cantidad_lechecondensada', $nueva_cantidad_lechecondensada, PDO::PARAM_INT);
+    $stmt->execute();
+
+    // Actualizar la cantidad de Huevos en la base de datos
+    $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_Huevos WHERE nombre = "Huevos"');
+    $stmt->bindParam(':nueva_cantidad_Huevos', $nueva_cantidad_Huevos, PDO::PARAM_INT);
+    $stmt->execute();
+
+    // Actualizar la cantidad de Harina de Trigo en la base de datos
+    $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_HarinadeTrigo WHERE nombre = "Harina de Trigo"');
+    $stmt->bindParam(':nueva_cantidad_HarinadeTrigo', $nueva_cantidad_HarinadeTrigo, PDO::PARAM_INT);
+    $stmt->execute();
 
 
+    // Actualizar la cantidad de Levadura en la base de datos
+    $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_Levadura WHERE nombre = "Levadura"');
+    $stmt->bindParam(':nueva_cantidad_Levadura', $nueva_cantidad_Levadura, PDO::PARAM_INT);
+    $stmt->execute();
+}
 
 // Cerrar la conexión con la base de datos
 $db = null;
