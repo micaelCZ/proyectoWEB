@@ -264,7 +264,7 @@
     <br>
     <br>
     
-    <input type="submit" value="Guardar Orden">
+    <input type="submit" name="guardar" value="Guardar Orden">
     </form>
     <script>
     function calcularCantidadIngredientes() {
