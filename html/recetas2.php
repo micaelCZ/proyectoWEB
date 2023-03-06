@@ -23,7 +23,7 @@
   <br>
   <br>
   <div id="receta1">
-  <form action="../html/restarInventario2.php" method="post">
+  <form action="../html/restarInventario2.php"  method="post">
     <h2>Pastel de chocolate (16 porciones)</h2>
     <center><img src="../img/pastelchocolate.png" style="width: 40%;"></center>
     <br>

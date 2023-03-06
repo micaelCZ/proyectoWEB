@@ -124,6 +124,16 @@ if ($nueva_cantidad_chocolate >= 0 && $nueva_cantidad_mantequilla >= 0 && $nueva
     $stmt = $db->prepare('UPDATE productos SET cantidad = :nueva_cantidad_Levadura WHERE nombre = "Levadura"');
     $stmt->bindParam(':nueva_cantidad_Levadura', $nueva_cantidad_Levadura, PDO::PARAM_INT);
     $stmt->execute();
+
+
+    
+
+    // Redireccionar al usuario a una página de éxito
+    header('Location: ../html/recetas2.php');
+
+}else{
+    // Si no hay suficientes ingredientes, mostrar un mensaje de error
+    echo "<script>alert('No hay suficientes ingredientes para hacer los pasteles');</script>";
 }
 
 // Cerrar la conexión con la base de datos
