@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Recetas</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/estilo1.css">
+  <link rel="stylesheet" href="../css/estilo4.css">
   <link rel="icon" type="image/png" href="../img/logo.png" />
-</head>
+ </head>
 <!--Barra de navegación-->
 <header>
     <div class="navbar-container">
@@ -14,12 +16,24 @@
 <body>
   <br>
   <br>
+
   <center>
     <form>
       <h2> Puedes crear una receta aquí.</h2>
       <button type="button" class="boton-agregar" onclick="window.location.href='../html/addReceta.html'">Agregar receta</button>
     </form>
   </center>
+
+
+  <br>
+  <br>
+
+  <center>
+    <form>
+      <h2> Puedes generar un código aleatorio aquí. También puedes ingresar un código manual en su lugar</h2><button type="button" class="boton-generar" onclick="document.getElementById('campo_codigo').value = generarCodigo1()">Generar código</button><input type="text" id="campo_codigo" name="codigo" placeholder="Presione el botón GENERAR CODIGO" style="width: 360px;">
+    </form>
+  </center>
+  <br>
   <br>
   <br>
   <div id="receta1">
@@ -279,5 +293,21 @@
     </script>
 
 
+
+<script src="../js/fechaHora.js"></script>
+  <script src="../js/codigos.js"></script>
+  <!-- Script que carga la barra de navegación-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('.navbar-container').load('navbar.html');
+    });
+  </script>
+  
+  <footer id="pie">
+    <p>Pastelería Le Postré © 2023 - Todos los derechos reservados</p>
+  </footer>
+   
 </body>
+
 </html>
