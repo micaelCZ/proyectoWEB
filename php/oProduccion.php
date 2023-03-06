@@ -24,19 +24,17 @@
   $db = new PDO('sqlite:../db/materiaPrima.db');
 
   //Consulta para obtener los productos
-  $query = "SELECT * FROM receta";
+  $query = "SELECT * FROM recetaspasteles";
   $result = $db->query($query);
 
   //Imprimir los resultados en una tabla
   echo "<table class='tabla'>";
-  echo "<tr><th>ID</th><th>Codigo</th><th>Nombre de Pastel</th><th>Producto</th><th>Cantidad</th><th>Editar</th><th>Eliminar</th></tr>";
+  echo "<tr><th>ID</th><th>Nombre Pastel</th><th>Precio</th><th>Editar</th><th>Eliminar</th></tr>";
   while($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo "<tr>";
     echo "<td>".$row['id']."</td>";
-    echo "<td>".$row['codigo']."</td>";
-    echo "<td>".$row['npastel']."</td>";
-    echo "<td>".$row['producto']."</td>";
-    echo "<td>".$row['cantidad']."</td>";
+    echo "<td>".$row['nombrep']."</td>";
+    echo "<td>".$row['precio']."</td>";
     echo "<td><a href='editarOrdenes.php?id=".$row['id']."'>Editar</a></td>";
     echo "<td><a href='eliminarOrdenes.php?id=".$row['id']."'>Eliminar</a></td>";
     echo "</tr>";
