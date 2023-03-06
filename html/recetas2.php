@@ -29,7 +29,7 @@
     <br>
     <label for="cantidad">Información de la orden:</label>
     <input type="hidden" id="producto" name="producto" value="Pastel de Chocolate">
-    <input type="number" id="cantidad-pasteles" name="cantidad     " min=0 required autofocus style="width: 170px;" placeholder="Cantidad de pasteles" onchange="calcularCantidadIngredientes()">
+    <input type="number" id="cantidad-pasteles" name="cantidad" min=0 required autofocus style="width: 170px;" placeholder="Cantidad de pasteles" onchange="calcularCantidadIngredientes()">
     <input type="text" id="campo_codigo" name="codigo" placeholder="Ingrese un código" style="width: 360px;">
     <!-- Ingrediente 1 -->
     <label for="nombre">Ingredientes:</label>
@@ -37,7 +37,7 @@
     
     
     
-    <select name="nombre" id="nombre1" style="width: 300px;" readonly disabled>
+    <select name="nombreChocolate" id="nombre1" style="width: 300px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -52,8 +52,8 @@
       $db = null;
       ?>
     </select>
-    <input type="number" id="cantidad1" name="cantidad" style="width: 80px;" placeholder="Cantidad" value="300" readonly>
-    <select name="unidad" id="unidad1" style="width: 80px;" readonly disabled>
+    <input type="number" id="cantidad1" name="cantidadChocolate" style="width: 80px;" placeholder="Cantidad" value="300" readonly>
+    <select name="unidadChocolate" id="unidad1" style="width: 80px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -75,7 +75,7 @@
 
 
 
-    <select name="nombre" id="nombre2" style="width: 300px;" readonly disabled>
+    <select name="nombreMantequilla" id="nombre2" style="width: 300px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -90,8 +90,8 @@
       $db = null;
       ?>
     </select>
-    <input type="number" id="cantidad2" name="cantidad" style="width: 80px;" placeholder="Cantidad" value="90" readonly>
-    <select name="unidad" id="unidad2" style="width: 80px;" readonly disabled>
+    <input type="number" id="cantidad2" name="cantidadMantequilla" style="width: 80px;" placeholder="Cantidad" value="90" readonly>
+    <select name="unidadMantequilla" id="unidad2" style="width: 80px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -114,7 +114,7 @@
 
 
 
-    <select name="nombre" id="nombre3" style="width: 300px;" readonly disabled>
+    <select name="nombreLecheCondensada" id="nombre3" style="width: 300px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -129,8 +129,8 @@
       $db = null;
       ?>
     </select>
-    <input type="number" id="cantidad3" name="cantidad" style="width: 80px;" placeholder="Cantidad" value="387" readonly>
-    <select name="unidad" id="unidad3" style="width: 80px;" readonly disabled>
+    <input type="number" id="cantidad3" name="cantidadLecheCondensada" style="width: 80px;" placeholder="Cantidad" value="387" readonly>
+    <select name="unidadLecheCondensada" id="unidad3" style="width: 80px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -153,7 +153,7 @@
 
 
 
-    <select name="nombre" id="nombre4" style="width: 300px;" readonly disabled>
+    <select name="nombreHuevos" id="nombre4" style="width: 300px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -168,8 +168,8 @@
       $db = null;
       ?>
     </select>
-    <input type="number" id="cantidad4" name="cantidad" style="width: 80px;" placeholder="Cantidad" value="3" readonly>
-    <select name="unidad" id="unidad4" style="width: 80px;" readonly disabled>
+    <input type="number" id="cantidad4" name="cantidadHuevos" style="width: 80px;" placeholder="Cantidad" value="3" readonly>
+    <select name="unidadHuevos" id="unidad4" style="width: 80px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -191,7 +191,7 @@
 
 
 
-    <select name="nombre" id="nombre5" style="width: 300px;" readonly disabled>
+    <select name="nombreHarinadeTrigo" id="nombre5" style="width: 300px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -206,8 +206,8 @@
       $db = null;
       ?>
     </select>
-    <input type="number" id="cantidad5" name="cantidad" style="width: 80px;" placeholder="Cantidad" value="454" readonly>
-    <select name="unidad" id="unidad5" style="width: 80px;" readonly disabled>
+    <input type="number" id="cantidad5" name="cantidadHarinadeTrigo" style="width: 80px;" placeholder="Cantidad" value="454" readonly>
+    <select name="unidadHarinadeTrigo" id="unidad5" style="width: 80px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -230,7 +230,7 @@
 
 
 
-    <select name="nombre" id="nombre6" style="width: 300px;" readonly disabled>
+    <select name="nombreLevadura" id="nombre6" style="width: 300px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -245,8 +245,8 @@
       $db = null;
       ?>
     </select>
-    <input type="number" id="cantidad6" name="cantidad" style="width: 80px;" placeholder="Cantidad" value="10" readonly>
-    <select name="unidad" id="unidad6" style="width: 80px;" readonly disabled>
+    <input type="number" id="cantidad6" name="cantidadLevadura" style="width: 80px;" placeholder="Cantidad" value="10" readonly>
+    <select name="unidadLevadura" id="unidad6" style="width: 80px;" readonly disabled>
       <?php
       // Conexión a la base de datos utilizando PDO
       $db = new PDO('sqlite:../db/materiaPrima.db');
@@ -264,7 +264,7 @@
     <br>
     <br>
     
-    <button type="submit" class="boton-guardar" name="guardar-orden">Guardar orden de compra</button>
+    <input type="submit" value="Guardar Orden">
     </form>
     <script>
     function calcularCantidadIngredientes() {
