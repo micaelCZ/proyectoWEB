@@ -125,15 +125,12 @@ if ($nueva_cantidad_chocolate >= 0 && $nueva_cantidad_mantequilla >= 0 && $nueva
     $stmt->bindParam(':nueva_cantidad_Levadura', $nueva_cantidad_Levadura, PDO::PARAM_INT);
     $stmt->execute();
 
-
-    
-
-    // Redireccionar al usuario a una página de éxito
+    // Redireccionar a la página de recetas2.php
     header('Location: ../html/recetas2.php');
-
-}else{
-    // Si no hay suficientes ingredientes, mostrar un mensaje de error
+} else {
+    // Si no hay suficientes ingredientes para hacer los pasteles, mostrar una alerta y redireccionar a la página de recetas2.php
     echo "<script>alert('No hay suficientes ingredientes para hacer los pasteles');</script>";
+    header('Location: ../html/recetas2.php');
 }
 
 // Cerrar la conexión con la base de datos

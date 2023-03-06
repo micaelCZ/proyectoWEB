@@ -6,7 +6,7 @@ function agregarIngrediente() {
         <input type="text" id="nombre" name="nombre" required autofocus>
         <br>
         <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" required>
+        <input type="number" id="cantidad" step= "0.1" name="cantidad" required>
         <br>
         <label for="unidad">Unidad de medida:</label>
         <select id="unidad" name="unidad">
